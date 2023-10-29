@@ -1,0 +1,60 @@
+name: BetPlugin
+main: org.tlaumm.bet.Bet
+version: 1.0
+description: Un plugin pour parier sur des événements dans Minecraft.
+author: Kazeey
+website: https://github.com/Kazeey
+depend: [Vault]
+api-version: '1.20'
+
+commands:
+  placebet:
+    description: Parier sur un joueur pour un événement.
+    usage: /placebet [joueur] [nom_event] [montant]
+    permission: betplugin.bet
+  createevent:
+    description: Créer un nouvel événement pour parier.
+    usage: /createevent [nom_event]
+    permission: betplugin.createevent
+  viewodds:
+    description: Voir les cotes pour un événement spécifique.
+    usage: /viewodds [nom_event]
+    permission: betplugin.viewodds
+  setwinner:
+    description: Définir le vainqueur pour un événement.
+    usage: /setwinner [nom_event] [nom_joueur]
+    permission: betplugin.setwinner
+  closeevent:
+    description: Fermer un événement pour empêcher d'autres paris.
+    usage: /closeevent [nom_event]
+    permission: betplugin.closeevent
+  help:
+    description: Afficher l'aide pour les commandes du plugin.
+    usage: /bethelp
+    permission: betplugin.bethelp
+  viewevents:
+    description: Voir tous les événements actifs.
+    usage: /viewevents
+    permission: betplugin.viewevents
+  mybets:
+    description: Voir tous vos paris actifs.
+    usage: /mybets
+    permission: betplugin.mybets
+  cashout:
+    description: Cash out sur un paris.
+    usage: /cashout [nom_event]
+    permission: betplugin.mybets
+
+permissions:
+  betplugin.*:
+    description: Donne accès à toutes les commandes et permissions du plugin BetPlugin.
+    default: true
+    children:
+      betplugin.bet: true
+      betplugin.createevent: true
+      betplugin.viewodds: true
+      betplugin.setwinner: true
+      betplugin.closeevent: true
+      betplugin.bethelp: true
+      betplugin.viewevents: true
+      betplugin.mybets: true

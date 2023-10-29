@@ -1,0 +1,4 @@
+org\tlaumm\bet\BetCommandExecutor.class
+org\tlaumm\bet\BetEvent.class
+org\tlaumm\bet\Bet.class
+org\tlaumm\bet\EventManager.class
